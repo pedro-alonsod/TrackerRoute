@@ -203,6 +203,7 @@ class MapForPlacesViewController: UIViewController, CLLocationManagerDelegate, M
             
             driversTableView.reloadData()
             
+            //
             //cell.textLabel?.text = "\(arrayOfNames[0]) \(timeStamp)"
             
             
