@@ -140,6 +140,13 @@
                                     <action selector="terminadoTapped:" destination="b2Y-M8-TDf" eventType="touchUpInside" id="ZSx-RS-nYy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVS-0a-AvO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Salir"/>
+                                <connections>
+                                    <action selector="salirTapped:" destination="b2Y-M8-TDf" eventType="touchUpInside" id="zE7-Ho-Xqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,6 +156,8 @@
                             <constraint firstAttribute="trailing" secondItem="6dF-jI-jIw" secondAttribute="trailing" id="EaV-k9-H5V"/>
                             <constraint firstAttribute="bottom" secondItem="uMZ-Ne-Jak" secondAttribute="bottom" constant="20" symbolic="YES" id="Nav-r3-UNE"/>
                             <constraint firstItem="6dF-jI-jIw" firstAttribute="centerX" secondItem="ve6-8y-1Jh" secondAttribute="centerX" id="Ruf-vm-7Ie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cVS-0a-AvO" secondAttribute="trailing" constant="8" id="b1b-pR-5P8"/>
+                            <constraint firstItem="cVS-0a-AvO" firstAttribute="top" secondItem="Qgy-yn-oVt" secondAttribute="bottom" id="eE8-dG-Ams"/>
                             <constraint firstItem="uMZ-Ne-Jak" firstAttribute="top" secondItem="6dF-jI-jIw" secondAttribute="bottom" constant="14" id="eRG-Te-fDS"/>
                             <constraint firstItem="6dF-jI-jIw" firstAttribute="leading" secondItem="567-Xo-tEX" secondAttribute="leading" id="nqp-0N-SRB"/>
                         </constraints>
@@ -157,6 +166,7 @@
                                 <exclude reference="ve6-8y-1Jh"/>
                                 <exclude reference="6dF-jI-jIw"/>
                                 <exclude reference="uMZ-Ne-Jak"/>
+                                <exclude reference="cVS-0a-AvO"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4zC-vb-VgB"/>
@@ -165,6 +175,8 @@
                                 <exclude reference="Ruf-vm-7Ie"/>
                                 <exclude reference="nqp-0N-SRB"/>
                                 <exclude reference="46M-Bk-cap"/>
+                                <exclude reference="b1b-pR-5P8"/>
+                                <exclude reference="eE8-dG-Ams"/>
                                 <exclude reference="Nav-r3-UNE"/>
                                 <exclude reference="eRG-Te-fDS"/>
                             </mask>
@@ -174,6 +186,7 @@
                                 <include reference="ve6-8y-1Jh"/>
                                 <include reference="6dF-jI-jIw"/>
                                 <include reference="uMZ-Ne-Jak"/>
+                                <include reference="cVS-0a-AvO"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="4zC-vb-VgB"/>
@@ -182,6 +195,8 @@
                                 <include reference="Ruf-vm-7Ie"/>
                                 <include reference="nqp-0N-SRB"/>
                                 <include reference="46M-Bk-cap"/>
+                                <include reference="b1b-pR-5P8"/>
+                                <include reference="eE8-dG-Ams"/>
                                 <include reference="Nav-r3-UNE"/>
                                 <include reference="eRG-Te-fDS"/>
                             </mask>
@@ -253,6 +268,13 @@
                                     <outlet property="delegate" destination="jeF-hr-wkx" id="Cyz-CH-NQZ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiL-cH-krY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Salir"/>
+                                <connections>
+                                    <action selector="salirTapped:" destination="jeF-hr-wkx" eventType="touchUpInside" id="DPL-9W-JhE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -263,9 +285,11 @@
                                 <variation key="widthClass=compact" constant="-5.5"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="hin-Pu-ar5" secondAttribute="trailing" id="MTy-47-EBp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aiL-cH-krY" secondAttribute="trailing" constant="8" id="OI6-dc-dyk"/>
                             <constraint firstItem="N4A-8b-paP" firstAttribute="top" secondItem="hin-Pu-ar5" secondAttribute="bottom" constant="2" id="Uep-nJ-bZS">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
+                            <constraint firstItem="aiL-cH-krY" firstAttribute="centerY" secondItem="Zfu-5f-0HW" secondAttribute="centerY" id="Uqw-LO-kZ5"/>
                             <constraint firstItem="hin-Pu-ar5" firstAttribute="leading" secondItem="N4A-8b-paP" secondAttribute="leading" id="aWM-4O-LSe"/>
                             <constraint firstItem="Zfu-5f-0HW" firstAttribute="top" secondItem="AgB-tR-JSv" secondAttribute="bottom" constant="8" symbolic="YES" id="nBE-ZJ-C0i"/>
                             <constraint firstItem="hin-Pu-ar5" firstAttribute="trailing" secondItem="N4A-8b-paP" secondAttribute="trailing" id="o87-JQ-Qbj"/>
@@ -275,17 +299,20 @@
                                 <exclude reference="hin-Pu-ar5"/>
                                 <exclude reference="Zfu-5f-0HW"/>
                                 <exclude reference="N4A-8b-paP"/>
+                                <exclude reference="aiL-cH-krY"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Lld-Cb-Zeo"/>
-                                <exclude reference="nBE-ZJ-C0i"/>
-                                <exclude reference="ERQ-KP-v3p"/>
-                                <exclude reference="Uep-nJ-bZS"/>
                                 <exclude reference="3aH-K3-GiZ"/>
                                 <exclude reference="CwD-7P-GCq"/>
                                 <exclude reference="MTy-47-EBp"/>
                                 <exclude reference="aWM-4O-LSe"/>
                                 <exclude reference="o87-JQ-Qbj"/>
+                                <exclude reference="Lld-Cb-Zeo"/>
+                                <exclude reference="nBE-ZJ-C0i"/>
+                                <exclude reference="OI6-dc-dyk"/>
+                                <exclude reference="Uqw-LO-kZ5"/>
+                                <exclude reference="ERQ-KP-v3p"/>
+                                <exclude reference="Uep-nJ-bZS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -293,17 +320,20 @@
                                 <include reference="hin-Pu-ar5"/>
                                 <include reference="Zfu-5f-0HW"/>
                                 <include reference="N4A-8b-paP"/>
+                                <include reference="aiL-cH-krY"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Lld-Cb-Zeo"/>
-                                <include reference="nBE-ZJ-C0i"/>
-                                <include reference="ERQ-KP-v3p"/>
-                                <include reference="Uep-nJ-bZS"/>
                                 <include reference="3aH-K3-GiZ"/>
                                 <include reference="CwD-7P-GCq"/>
                                 <include reference="MTy-47-EBp"/>
                                 <include reference="aWM-4O-LSe"/>
                                 <include reference="o87-JQ-Qbj"/>
+                                <include reference="Lld-Cb-Zeo"/>
+                                <include reference="nBE-ZJ-C0i"/>
+                                <include reference="OI6-dc-dyk"/>
+                                <include reference="Uqw-LO-kZ5"/>
+                                <include reference="ERQ-KP-v3p"/>
+                                <include reference="Uep-nJ-bZS"/>
                             </mask>
                         </variation>
                     </view>

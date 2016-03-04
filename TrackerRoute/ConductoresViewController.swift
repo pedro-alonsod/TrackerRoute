@@ -120,12 +120,12 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
 
     @IBAction func terminadoTapped(sender: UIButton) {
      
-        let locationMty = CLLocation(latitude: 25.68661, longitude: -100.31611)
+        let locationMty = CLLocation(latitude: 25.67802, longitude: -100.28792)
         //let locationInitial = CLLocation(latitude: mapForRoute.userLocation.coordinate.latitude, longitude: mapForRoute.userLocation.coordinate.longitude)
         
         //centerMapOnLocation(initialLocation)
         
-        centerMapOnLocation(locationMty)
+        //centerMapOnLocation(locationMty)
         
         var newCoord:CLLocationCoordinate2D = CLLocationCoordinate2DMake(25.67802, -100.28792)
         
@@ -134,6 +134,8 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
         newAnotation.title = "Teminado"
         newAnotation.subtitle = "He llegado"
         mapaDeLlegada.addAnnotation(newAnotation)
+        
+        centerMapOnLocation(locationMty)
         
         
         
@@ -149,4 +151,11 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
     }
     */
 
+    @IBAction func salirTapped(sender: UIButton) {
+        
+
+        locationManager.stopUpdatingLocation()
+
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

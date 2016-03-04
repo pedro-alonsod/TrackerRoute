@@ -261,4 +261,10 @@ class MapForPlacesViewController: UIViewController, CLLocationManagerDelegate, M
     
     */
 
+    @IBAction func salirTapped(sender: UIButton) {
+        
+        locationManager.stopUpdatingLocation()
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
