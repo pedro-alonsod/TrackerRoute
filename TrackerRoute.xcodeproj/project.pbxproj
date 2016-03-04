@@ -14,6 +14,10 @@
 		B7A9538C1C87769C00B524F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A9538A1C87769C00B524F1 /* LaunchScreen.storyboard */; };
 		B7A953971C87769D00B524F1 /* TrackerRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A953961C87769D00B524F1 /* TrackerRouteTests.swift */; };
 		B7A953A21C87769D00B524F1 /* TrackerRouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A953A11C87769D00B524F1 /* TrackerRouteUITests.swift */; };
+		B7A953B21C877CAD00B524F1 /* MapForPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A953B11C877CAD00B524F1 /* MapForPlacesViewController.swift */; };
+		B7A953B41C878C6000B524F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A953B31C878C6000B524F1 /* CoreLocation.framework */; };
+		B7A953B61C878C6800B524F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A953B51C878C6800B524F1 /* MapKit.framework */; };
+		B7A953B81C88AB6800B524F1 /* ConductoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A953B71C88AB6800B524F1 /* ConductoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B7A9539D1C87769D00B524F1 /* TrackerRouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerRouteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A953A11C87769D00B524F1 /* TrackerRouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteUITests.swift; sourceTree = "<group>"; };
 		B7A953A31C87769D00B524F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A953B11C877CAD00B524F1 /* MapForPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapForPlacesViewController.swift; sourceTree = "<group>"; };
+		B7A953B31C878C6000B524F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B7A953B51C878C6800B524F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B7A953B71C88AB6800B524F1 /* ConductoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConductoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A953B61C878C6800B524F1 /* MapKit.framework in Frameworks */,
+				B7A953B41C878C6000B524F1 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,8 @@
 		B7A953751C87769C00B524F1 = {
 			isa = PBXGroup;
 			children = (
+				B7A953B51C878C6800B524F1 /* MapKit.framework */,
+				B7A953B31C878C6000B524F1 /* CoreLocation.framework */,
 				B7A953801C87769C00B524F1 /* TrackerRoute */,
 				B7A953951C87769D00B524F1 /* TrackerRouteTests */,
 				B7A953A01C87769D00B524F1 /* TrackerRouteUITests */,
@@ -100,6 +112,8 @@
 				B7A953811C87769C00B524F1 /* AppDelegate.swift */,
 				B7A953831C87769C00B524F1 /* ViewController.swift */,
 				B7A953851C87769C00B524F1 /* Main.storyboard */,
+				B7A953B71C88AB6800B524F1 /* ConductoresViewController.swift */,
+				B7A953B11C877CAD00B524F1 /* MapForPlacesViewController.swift */,
 				B7A953881C87769C00B524F1 /* Assets.xcassets */,
 				B7A9538A1C87769C00B524F1 /* LaunchScreen.storyboard */,
 				B7A9538D1C87769D00B524F1 /* Info.plist */,
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					B7A9537D1C87769C00B524F1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 83H2UD8L4C;
 					};
 					B7A953911C87769D00B524F1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -256,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A953B21C877CAD00B524F1 /* MapForPlacesViewController.swift in Sources */,
 				B7A953841C87769C00B524F1 /* ViewController.swift in Sources */,
+				B7A953B81C88AB6800B524F1 /* ConductoresViewController.swift in Sources */,
 				B7A953821C87769C00B524F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrackerRoute/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pedroalonso.TrackerRoute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrackerRoute/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pedroalonso.TrackerRoute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
