@@ -208,7 +208,7 @@ class MapForPlacesViewController: UIViewController, CLLocationManagerDelegate, M
             
             
         }
-        print("x")
+        //print("x")
     }
     
     

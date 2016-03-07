@@ -18,6 +18,9 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
     var locationManager: CLLocationManager = CLLocationManager()
 
     var userName: String!
+
+    var currentLocation: CLLocationCoordinate2D!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,10 +120,19 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
         mapaDeLlegada.showsUserLocation = (status == .AuthorizedAlways)
         
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        currentLocation = manager.location!.coordinate
+    }
+
 
     @IBAction func terminadoTapped(sender: UIButton) {
      
         let locationMty = CLLocation(latitude: 25.67802, longitude: -100.28792)
+        
+        let locationNow = CLLocation(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
         //let locationInitial = CLLocation(latitude: mapForRoute.userLocation.coordinate.latitude, longitude: mapForRoute.userLocation.coordinate.longitude)
         
         //centerMapOnLocation(initialLocation)
@@ -128,14 +140,15 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
         //centerMapOnLocation(locationMty)
         
         var newCoord:CLLocationCoordinate2D = CLLocationCoordinate2DMake(25.67802, -100.28792)
+        let currentpoint = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
         
         var newAnotation = MKPointAnnotation()
-        newAnotation.coordinate = newCoord
+        newAnotation.coordinate = currentpoint
         newAnotation.title = "Teminado"
         newAnotation.subtitle = "He llegado"
         mapaDeLlegada.addAnnotation(newAnotation)
         
-        centerMapOnLocation(locationMty)
+        centerMapOnLocation(locationNow)
         
         
         
@@ -151,6 +164,8 @@ class ConductoresViewController: UIViewController, CLLocationManagerDelegate, MK
     }
     */
 
+    
+    
     @IBAction func salirTapped(sender: UIButton) {
         
 
